@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="loginStyle.css">
+    <title>register</title>
+</head>
+
+<body class="">
+    <div class="parent">
+        <div class="formDiv">
+            <h2 class="form-title">ثبت نام</h2>
+            <form method="POST" class="register-form" id="login-form">
+                <div id="username-main" class="form-group">
+                    <label for="your_name"><i class="fa fa-user"></i></label>
+                    <input type="text" name="your_name" id="userName" placeholder="نام کاربری" onkeyup="checkName()">
+                </div>
+                <div id="email-main" class="form-group">
+                    <label for="your_email"><i class="fa fa-envelope"></i></label>
+                    <input type="email" name="your_email" id="email" placeholder="ایمیل" onkeyup="checkEmail()">
+                </div>
+                <div id="gender-main" class="form-group">
+                        <label for=""><i class="fa fa-child"></i></label>
+                        <select id="gender" tabindex="-1" onfocus="checkGender()" >
+                                <option disabled="disabled" selected="selected" id="">جنسیت</option>
+                                <option id="male">مرد</option>
+                                <option id="female">زن</option>
+                                </select>
+                </div>
+                <div id="pass-main" class="form-group">
+                    <label for="your_pass"><i class="fa fa-lock"></i></label>
+                    <input type="password" id="password" onkeyup="checkPassword()" placeholder="رمز عبور">
+                    <p id=passNote>رمز عبور باید شامل حداقل یک عدد و یک کاراکتر خاص باشد</p>
+                    <i id="eye" class='fa fa-eye-slash'></i>
+                    
+                </div>
+                <div id="passCon-main" class="form-group">
+                        <label for="your_passCon"><i class="fa fa-lock"></i></label>
+                        <input type="password" id="passCon" onkeyup="checkPasswordCon()" placeholder="تکرار رمز عبور">
+
+                    </div>
+                    <div id="alert">
+                        <p id="alert-txt">لطفا تمامی فیلدها را به درستی پر کنید</p>
+                    </div>
+                <div class="form-group form-button">
+                    <button type="button"  id="register-btn" class="btn btn-success" onclick="registerFunc()">ثبت نام</button>
+                </div>
+            </form>
+        </div>
+        <div class="imgDiv">
+            <img src="images/signup-image.jpg" alt="">
+            <a href="/login">قبلا ثبت نام کرده ام</a>
+        </div>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="registerScript.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="loginStyle.css">
+    <title>login</title>
+</head>
+
+<body class="">
+    <div class="parent">
+        
+        <div class="imgDiv">
+            <img src="images/signin-image.jpg" alt="">
+            <a href="/register">ایجاد حساب جدید</a>
+
+        </div>
+        <div class="formDiv">
+             <h2 class="form-title">ورود به پنل کاربری</h2>
+            <% if(registerMode){ %>
+            <div class="alert alert-success">
+                <strong>ثبت نام با موفقیت انجام شد</strong>
+              </div>
+              <% }else if(editMode){ %>
+                <div class="alert alert-success">
+                    <strong>تغییرات ذخیره شد
+                        <br>
+                        برای ورود از نام کاربری و کلمه عبور جدید استفاده کنید
+                    </strong>
+                  </div>
+                  <% } %>
+                <form method="POST" class="register-form" id="login-form">
+                <div id="user-main" class="form-group">
+                <label for="your_name"><i class="fa fa-user"></i></label>
+                <input type="text" name="your_name" id="userName" placeholder="نام کاربری" >
+                </div>
+                <div id="pass-main" class="form-group">
+                <label for="your_pass"><i class="fa fa-lock"></i></label>
+                <input type="password" name="your_pass" id="password" placeholder="رمز عبور" >
+                </div>
+                <div id="alert">
+                        <p id="alert-txt"></p>
+                    </div>
+                <div class="form-group form-button">
+                <button type="button" id="login" class="btn btn-success" onclick="loginFunc()">ورود</button>
+                </div>
+                </form>
+        </div>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="logScript.js"></script>
+</body>
+
+</html>

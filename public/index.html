@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ex10</title>
+</head>
+
+<body class="">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div
+            class="main col-6 rounded px-3 py-3 my-5 mx-5 d-flex justify-content-center align-items-center flex-column">
+            <div class="mb-3 text-white ">
+                <h3>ورود به پنل کاربری</h3>
+            </div>
+            <div class="mb-3 col-7 px-0 position-relative mb-4">
+                <div class="input-parent">
+                    <div class="myspan col-2">
+                        <span class=""><i class="fa fa-user"></i></span>
+                    </div>
+                    <input id="userName" type="text" class="myInput col-10" placeholder="نام کاربری">
+
+                </div>
+                <span class="req" id="req1">الزامی</span>
+            </div>
+            <div class="mb-3 col-7 px-0 position-relative mb-4">
+                <div class="input-parent">
+                    <div class="myspan col-2">
+                        <span class=""><i class="fa fa-lock"></i></span>
+                    </div>
+                    <input id="password" type="password" class="myInput col-10" placeholder="رمز عبور">
+
+                </div>
+                <span class="req" id="req2">الزامی</span>
+            </div>
+            <div class="mb-3 col-7 px-0 bg-dark mt-2">
+                <input type="button" class="btn btn-success col-12 myInput" onclick="login()" value="ورود">
+            </div>
+            <span id="req4">شما با موفقیت وارد شدید</span>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
